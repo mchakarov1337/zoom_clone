@@ -12,7 +12,7 @@ const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
   const { endedCalls, upcomingCalls, callRecordings, isLoading } =
     useGetCalls();
   const router = useRouter();
-  const [recordings, setRecordings] = useState<CallRecording>([]);
+  const [recordings, setRecordings] = useState<CallRecording[]>([]);
   const { toast } = useToast();
 
   const getCalls = () => {
