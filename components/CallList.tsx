@@ -89,8 +89,8 @@ const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
               'Personal Meeting'
             }
             date={
-              meeting.state?.startsAt.toLocaleString() ||
-              meeting.start_time.toLocaleString()
+              (meeting as Call).state?.startsAt?.toLocaleString() ||
+              (meeting as CallRecording).start_time?.toLocaleString()
             }
             isPreviousMeeting={type === 'ended'}
             buttonIcon1={type === 'recordings' ? '/icons/play.svg' : undefined}
