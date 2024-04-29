@@ -8,7 +8,11 @@ import {
 import React, { useState, useEffect } from 'react';
 import { Button } from './ui/button';
 
-const MeetingSetup = ({ setIsSetupComplete }: (value: boolean) => void) => {
+const MeetingSetup = ({
+  setIsSetupComplete,
+}: {
+  setIsSetupComplete: (value: boolean) => void;
+}) => {
   const [isMicCamToggledOn, setIsMicCamToggledOn] = useState(false);
   const call = useCall();
 
